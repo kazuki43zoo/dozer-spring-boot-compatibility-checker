@@ -17,4 +17,6 @@ matrix:
   - env: SPRING_BOOT_VERSION=1.5.14.RELEASE
   - env: SPRING_BOOT_VERSION=1.4.7.RELEASE
 
-install: ./mvnw -U clean install -Dspring-boot.version=${SPRING_BOOT_VERSION}
+install: true
+
+script: ./mvnw -U clean verify -Dspring-boot.version=${SPRING_BOOT_VERSION}
