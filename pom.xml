@@ -14,6 +14,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.testSource>${java.version}</maven.compiler.testSource>
+        <maven.compiler.testTarget>${java.version}</maven.compiler.testTarget>
         <java.version>1.8</java.version>
         <spring-boot.version>2.0.3.RELEASE</spring-boot.version>
         <dozer.version>6.2.0</dozer.version>
