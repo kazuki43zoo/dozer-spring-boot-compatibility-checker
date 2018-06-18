@@ -1,4 +1,8 @@
+dist: trusty
+sudo: required
+
 language: java
+
 jdk:
   - oraclejdk8
 
@@ -12,3 +16,5 @@ matrix:
   - env: SPRING_BOOT_VERSION=2.0.3.RELEASE
   - env: SPRING_BOOT_VERSION=1.5.14.RELEASE
   - env: SPRING_BOOT_VERSION=1.4.7.RELEASE
+
+install: ./mvnw -U clean install -Dspring-boot.version=${SPRING_BOOT_VERSION}
