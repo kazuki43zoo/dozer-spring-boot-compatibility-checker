@@ -1,8 +1,8 @@
 package com.example.dozerspringboot;
 
+import com.github.dozermapper.core.DozerBeanMapper;
+import com.github.dozermapper.core.Mapper;
 import org.assertj.core.api.Assertions;
-import org.dozer.DozerBeanMapper;
-import org.dozer.Mapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,6 @@ public class DozerApplicationTests {
 		Assertions.assertThat(destination)
 				.hasFieldOrPropertyWithValue("value", "test");
 
-		@SuppressWarnings("deprecation")
 		List<String> mappingFiles = DozerBeanMapper.class.cast(dozerMapper).getMappingFiles();
 		Assertions.assertThat(mappingFiles).isNotEmpty();
 	}

@@ -2,7 +2,8 @@
 
 The compatibility checker project for dozer-spring-boot-starter
 
-[![Build Status](https://travis-ci.org/kazuki43zoo/dozer-spring-boot-compatibility-checker.svg?branch=master)](https://travis-ci.org/kazuki43zoo/dozer-spring-boot-compatibility-checker)
+* [![Build Status](https://travis-ci.org/kazuki43zoo/dozer-spring-boot-compatibility-checker.svg?branch=master)](https://travis-ci.org/kazuki43zoo/dozer-spring-boot-compatibility-checker) - 6.3.0-SNAPSHOT
+* [![Build Status](https://travis-ci.org/kazuki43zoo/dozer-spring-boot-compatibility-checker.svg?branch=6.2.x)](https://travis-ci.org/kazuki43zoo/dozer-spring-boot-compatibility-checker) - 6.2.0
 
 This project check Dozer 6.2.0 with the following Spring Boot versions per daily using travis cron.
 
