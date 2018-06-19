@@ -1,6 +1,7 @@
 package com.example.dozerspringboot;
 
 import org.assertj.core.api.Assertions;
+import org.dozer.DozerBeanMapper;
 import org.dozer.Mapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,9 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ApplicationTests {
+public class DozerApplicationTests {
 
 	@Autowired
 	private Mapper dozerMapper;
@@ -24,6 +27,10 @@ public class ApplicationTests {
 
 		Assertions.assertThat(destination)
 				.hasFieldOrPropertyWithValue("value", "test");
+
+		@SuppressWarnings("deprecation")
+		List<String> mappingFiles = DozerBeanMapper.class.cast(dozerMapper).getMappingFiles();
+		Assertions.assertThat(mappingFiles).isNotEmpty();
 	}
 
 	static class Source {
