@@ -19,4 +19,6 @@ matrix:
 
 install: true
 
-script: ./mvnw -U clean verify -Dspring-boot.version=${SPRING_BOOT_VERSION}
+script:
+  - ./mvnw -U clean verify -Dspring-boot.version=${SPRING_BOOT_VERSION}
+  - ./mvnw -U clean verify -Dspring-boot.version=${SPRING_BOOT_VERSION} -Ddozer.version=6.3.0-SNAPSHOT
